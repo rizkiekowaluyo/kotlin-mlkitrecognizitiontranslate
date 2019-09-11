@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_default"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgPict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/section_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgPict"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_camera"
+            android:text="@string/btn_camera" />
+
+        <Button
+            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_detect"
+            android:text="@string/btn_device" />
+
+        <Button
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:id="@+id/btn_translate"
+            android:text="@string/btn_translate" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        tools:text="Show Text Here"
+        android:layout_below="@id/section_bottom"
+        android:layout_marginTop="@dimen/margin_default"/>
+
+
+</RelativeLayout>

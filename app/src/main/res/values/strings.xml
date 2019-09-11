@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TextRecognizer</string>
+    <string name="capture">Capture</string>
+    <string name="detect">Detect</string>
+    <string name="btn_camera">Camera</string>
+    <string name="btn_device">Device</string>
+    <string name="btn_translate">Translate</string>
+    <string name="error_not_found">Error Not Found</string>
+</resources>
