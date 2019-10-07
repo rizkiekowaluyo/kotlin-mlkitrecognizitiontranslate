@@ -27,19 +27,25 @@
             android:layout_height="50dp"
             android:layout_width="wrap_content"
             android:id="@+id/btn_camera"
-            android:text="@string/btn_camera" />
+            android:text="@string/btn_camera"
+            android:background="@color/Silver"/>
 
         <Button
             android:layout_height="50dp"
             android:layout_width="wrap_content"
             android:id="@+id/btn_detect"
-            android:text="@string/btn_device" />
+            android:layout_marginRight="7dp"
+            android:layout_marginLeft="7dp"
+            android:text="@string/btn_device"
+            android:background="@color/Silver"/>
 
         <Button
             android:layout_height="50dp"
             android:layout_width="match_parent"
             android:id="@+id/btn_translate"
-            android:text="@string/btn_translate" />
+            android:text="@string/btn_translate"
+            android:textColor="@color/White"
+            android:background="@color/DarkAqua"/>
 
     </LinearLayout>
 
@@ -50,7 +56,9 @@
         android:textStyle="bold"
         tools:text="Show Text Here"
         android:layout_below="@id/section_bottom"
-        android:layout_marginTop="@dimen/margin_default"/>
+        android:layout_marginTop="@dimen/margin_default"
+        android:background="@drawable/back"
+        />
 
 
 </RelativeLayout>
