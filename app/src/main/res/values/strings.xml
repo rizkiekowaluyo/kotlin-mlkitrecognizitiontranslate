@@ -6,4 +6,6 @@
     <string name="btn_device">Scan</string>
     <string name="btn_translate">Translate</string>
     <string name="error_not_found">Error Not Found</string>
+    <string name="Login_gmail">Login</string>
+    <string name="Loginwithgoogle">LOGIN WITH GOOGLE</string>
 </resources>
