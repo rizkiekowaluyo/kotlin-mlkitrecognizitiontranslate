@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:id="@+id/btn_camera"
             android:text="@string/btn_camera"
-            android:background="@color/Silver"/>
+            android:background="@color/Silver" />
 
         <Button
             android:layout_height="50dp"
@@ -45,7 +45,7 @@
             android:id="@+id/btn_translate"
             android:text="@string/btn_translate"
             android:textColor="@color/White"
-            android:background="@color/DarkAqua"/>
+            android:background="@color/DarkAqua" />
 
     </LinearLayout>
 

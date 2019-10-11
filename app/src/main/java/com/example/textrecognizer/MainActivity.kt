@@ -13,17 +13,24 @@ import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import kotlinx.android.synthetic.main.activity_main.*
 import com.google.firebase.ml.vision.text.FirebaseVisionText
 import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
 
 
 class MainActivity : AppCompatActivity(){
 
-    val PICK_IMAGE_REQUEST = 1
+    var PICK_IMAGE_REQUEST = 1
     lateinit var imageBitmap: Bitmap
+    var mAuth : FirebaseAuth? = null
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        mAuth = FirebaseAuth.getInstance()
+        val user = mAuth!!.currentUser
+        tvText.text = user?.email
+
 
         findViewById<ImageView>(R.id.imgPict)
         FirebaseApp.initializeApp(this)
