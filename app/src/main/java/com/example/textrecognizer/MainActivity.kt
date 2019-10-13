@@ -6,6 +6,8 @@ import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.Toast
 import com.google.firebase.ml.vision.FirebaseVision
@@ -14,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import com.google.firebase.ml.vision.text.FirebaseVisionText
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
+import com.pranavpandey.android.dynamic.toasts.DynamicToast
 
 
 class MainActivity : AppCompatActivity(){
@@ -52,6 +55,30 @@ class MainActivity : AppCompatActivity(){
         if (resultCode == Activity.RESULT_OK && requestCode == PICK_IMAGE_REQUEST && data != null){
             imageBitmap = data.extras?.get("data") as Bitmap
             imgPict.setImageBitmap(imageBitmap)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        setActionMenu(item.itemId)
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun setActionMenu(selectedMenu: Int) {
+        when(selectedMenu){
+            R.id.action_profile -> {
+//                soon get data from email
+            }
+            R.id.action_signout -> {
+                mAuth!!.signOut()
+                startActivity(Intent(this,LoginActivity::class.java))
+                finish()
+                DynamicToast.makeSuccess(applicationContext,"Sign Out Successfully").show()
+            }
         }
     }
 
