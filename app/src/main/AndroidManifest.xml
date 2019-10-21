@@ -28,7 +28,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ProfileActivity" />
 
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"

@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity(){
         findViewById<ImageView>(R.id.imgPict)
         FirebaseApp.initializeApp(this)
 
-        btn_camera.setOnClickListener { View -> takePictureIntent() }
-        btn_detect.setOnClickListener { View -> detectImage() }
+        btn_camera.setOnClickListener { takePictureIntent() }
+        btn_detect.setOnClickListener { detectImage() }
 
     }
 
@@ -72,10 +72,11 @@ class MainActivity : AppCompatActivity(){
         when(selectedMenu){
             R.id.action_profile -> {
 //                soon get data from email
+                startActivity(Intent(this,ProfileActivity::class.java))
             }
             R.id.action_signout -> {
                 mAuth!!.signOut()
-                startActivity(Intent(this,LoginActivity::class.java))
+                startActivity(Intent(this@MainActivity,LoginActivity::class.java))
                 finish()
                 DynamicToast.makeSuccess(applicationContext,"Sign Out Successfully").show()
             }
