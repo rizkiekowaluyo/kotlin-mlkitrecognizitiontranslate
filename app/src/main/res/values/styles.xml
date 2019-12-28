@@ -13,5 +13,24 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="SrcLangText" >
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
 
+    <style name="TranslatedLangText" parent="SrcLangText">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="SrcText" >
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+
+    <style name="TranslatedText" >
+        <item name="android:textSize">38sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
 </resources>
